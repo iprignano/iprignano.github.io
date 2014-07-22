@@ -1,0 +1,20 @@
+// Import Bourbon and Neat
+// ===========================
+@import '../bourbon/bourbon'
+@import '../neat/neat'
+
+// Grid
+// ===========================
+.wrapper
+  @include outer-container
+
+  .col-12
+    @include span-columns(12)
+
+  .col-6
+    @include span-columns(6 of 12)
+
+// Utility stuff
+// ===========================
+figure
+  margin: 0

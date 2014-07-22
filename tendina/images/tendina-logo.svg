@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="426px" height="163px" viewBox="0 0 426 163" enable-background="new 0 0 426 163" xml:space="preserve">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="46.5498" y1="88.5728" x2="46.5498" y2="22.9741">
+	<stop  offset="0" style="stop-color:#27AAE1"/>
+	<stop  offset="1" style="stop-color:#0087CA"/>
+</linearGradient>
+<path fill="url(#SVGID_1_)" d="M25.512,27.016v60.072c2.733,0.968,5.601,1.485,8.56,1.485c18.51,0,33.515-20.167,33.515-45.045
+	c0-7.405-1.33-14.391-3.685-20.553H29.588C27.337,22.974,25.512,24.784,25.512,27.016z"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="122.8057" y1="88.5728" x2="122.8057" y2="22.9746">
+	<stop  offset="0" style="stop-color:#27AAE1"/>
+	<stop  offset="1" style="stop-color:#0087CA"/>
+</linearGradient>
+<path fill="url(#SVGID_2_)" d="M143.12,27.016v60.072c-2.733,0.967-5.602,1.485-8.56,1.485c-18.51,0-30.251-15.931-31.834-42.732
+	c-0.5-8.477-0.352-16.704,2.003-22.866h34.315C141.294,22.975,143.12,24.784,143.12,27.016z"/>
+<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="43.0273" y1="140.0254" x2="43.0273" y2="90.2856">
+	<stop  offset="0" style="stop-color:#27AAE1"/>
+	<stop  offset="1" style="stop-color:#0087CA"/>
+</linearGradient>
+<path fill="url(#SVGID_3_)" d="M28.487,90.285c-1.01,0-2.002,0.134-2.975,0.38v45.71c0,2.016,1.634,3.65,3.65,3.65h31.213
+	c0.827-3.98-1.613-8.846-3.083-13.086C48.386,101.248,49.414,90.285,28.487,90.285z"/>
+<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="122.9229" y1="140.0254" x2="122.9229" y2="90.2861">
+	<stop  offset="0" style="stop-color:#27AAE1"/>
+	<stop  offset="1" style="stop-color:#0087CA"/>
+</linearGradient>
+<path fill="url(#SVGID_4_)" d="M140.145,90.286c1.01,0,2.003,0.134,2.975,0.38v45.709c0,2.018-1.635,3.65-3.65,3.65h-36.705
+	c-0.827-3.98,11.724-20.799,13.616-24.87C127.942,90.285,130.768,90.286,140.145,90.286z"/>
+<text transform="matrix(1 0 0 1 179.3608 104.4375)" fill="#414042" font-family="'MyriadPro-Semibold'" font-size="70" letter-spacing="-2">Tendina</text>
+</svg>
