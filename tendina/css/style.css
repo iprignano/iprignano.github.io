@@ -119,17 +119,25 @@ h1 {
     box-shadow: 0 2px 0 #1f8ac4, inset 0 1px 0 #8fcced;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
 
-#about {
-  padding: 40px 0; }
-  #about .info {
-    background-color: #d1eaf8;
-    padding: 20px;
-    border-left: 10px solid #2399da; }
-  #about h3 {
-    padding-top: 30px; }
-  #about ol li,
-  #about ul li {
-    padding: 3px 0; }
+#about .info {
+  background-color: #d1eaf8;
+  padding: 20px;
+  border-left: 10px solid #2399da; }
+#about .about-bottom {
+  background-color: #F5F5F5;
+  margin-top: 30px; }
+  #about .about-bottom h3 {
+    padding-top: 0; }
+  #about .about-bottom .col-6 {
+    padding: 0 20px 20px 20px; }
+#about h3 {
+  padding-top: 30px; }
+#about ol li,
+#about ul li {
+  padding: 3px 0; }
+
+#examples {
+  margin-top: 100px; }
 
 .example {
   padding: 40px 0; }

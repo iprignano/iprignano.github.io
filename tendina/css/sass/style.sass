@@ -3,6 +3,10 @@
 @import '../bourbon/bourbon'
 @import '../neat/neat'
 
+// Vars
+// ===========================
+@import 'vars'
+
 // Grid
 // ===========================
 .wrapper
@@ -16,14 +20,6 @@
 
   .row
     @include row()
-
-// Colors
-// ===========================
-$lightblue: #2399da
-$grey: #313132
-$orange: #E0CE2B
-$headings-font: 'Roboto', sans-serif
-$monospaced-font: 'Source Code Pro', monospace
 
 // Utility stuff
 // ===========================
@@ -125,12 +121,20 @@ h1
 // About
 // ===========================
 #about
-  padding: 40px 0
-
   .info
     background-color: lighten($lightblue, 40%)
     padding: 20px
     border-left: 10px solid $lightblue
+
+  .about-bottom
+    background-color: #F5F5F5
+    margin-top: 30px
+
+    h3
+      padding-top: 0
+
+    .col-6
+      padding: 0 20px 20px 20px
 
   h3
     padding-top: 30px
@@ -142,6 +146,9 @@ h1
 
 // Examples
 // ===========================
+#examples
+  margin-top: 100px
+
 .example
   @include clearfix()
   padding: 40px 0
