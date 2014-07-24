@@ -2,9 +2,11 @@
 <html>
 <head>
   <title>Tendina jQuery Plugin</title>
+  <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
 
   <link rel="stylesheet" href="css/monokai_sublime.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <header class="header">
@@ -29,8 +31,9 @@
   <section id="intro">
     <h2 class="claim">Tendina is a simple jQuery plugin that helps you to build vertical,<br /> interactive side-menus in seconds.</h2>
     <section class="link">
-      <div class="download">Download</div>
-      <div class="github">Star on Github</div>
+      <div class="download-button"><a href="#">Download</a></div>
+      <div class="github-stars"><iframe src="http://ghbtns.com/github-btn.html?user=iprignano&repo=tendina&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe></div>
     </section>
   </section>
   <!-- /intro -->
@@ -38,29 +41,29 @@
   <section id="examples">
     <div class="wrapper">
       <section class="example">
-        <h3 class="example-title">Basic example</h2>
+        <h3 class="example-title">Default example</h2>
         <aside class="example-description col-6">
           <p>
-            This is the most basic example of Tendina usage.
+            This is the most basic example of Tendina usage – the menu will be inited with default options.
           </p>
 
-<pre><code class="javascript">$('#my-menu').tendina()
+<pre class="spaced"><code class="javascript">$('#my-menu').tendina();
 </code></pre>
         </aside>
 
         <section class="example-frame col-6">
           <div class="example-menu-container">
-            <ul id="my-menu">
+            <ul id="my-menu" class="menu-example">
               <li><a href="#">Rock</a>
                 <ul>
                   <li><a href="#">Garage Rock</a>
                     <ul>
-                      <li><a target="_blank" href="http://www.last.fm/music/The+Hives">The Hives</a></li>
+                      <li><a href="#">The Hives</a></li>
                     </ul>
                   </li>
                   <li><a href="#">Progressive Rock</a>
                     <ul>
-                      <li><a target="_blank" href="http://www.last.fm/music/King+Crimson">King Crimson</a></li>
+                      <li><a href="#">King Crimson</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -69,13 +72,13 @@
                 <ul>
                   <li><a href="#">Progressive Metal</a>
                     <ul>
-                      <li><a target="_blank" href="http://www.last.fm/music/Opeth">Opeth</a></li>
-                      <li><a target="_blank" href="http://www.last.fm/music/Porcupine+Tree">Porcupine Tree</a></li>
+                      <li><a href="#">Opeth</a></li>
+                      <li><a href="#">Porcupine Tree</a></li>
                     </ul>
                   </li>
                   <li><a href="#">Groove Metal</a>
                     <ul>
-                      <li><a href="http://www.last.fm/music/Pantera" target="_blank">Pantera</a></li>
+                      <li><a href="#">Pantera</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -84,12 +87,13 @@
                 <ul>
                   <li><a href="#">Acid</a>
                     <ul>
-                      <li><a href="http://www.last.fm/music/Acidwolf" target="_blank">Acidwolf</a></li>
+                      <li><a href="#">Acidwolf</a></li>
                     </ul>
                   </li>
                   <li><a href="#">IDM</a>
                     <ul>
-                      <li><a href="http://www.last.fm/music/Aphex+Twin" target="_blank">Aphex Twin</a></li>
+                      <li><a href="#">Aphex Twin</a></li>
+                      <li><a href="#">Autechre</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -98,12 +102,12 @@
                 <ul>
                   <li><a href="#">80s</a>
                     <ul>
-                      <li><a href="http://www.last.fm/music/Michael+Jackson" target="_blank">Micheal Jackson</a></li>
+                      <li><a href="#">Micheal Jackson</a></li>
                     </ul>
                   </li>
                   <li><a href="#">Dance</a>
                     <ul>
-                      <li><a href="http://www.last.fm/music/David+Guetta" target="_blank">David Guetta</a></li>
+                      <li><a href="#">Madonna</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -114,34 +118,210 @@
           <div class="fake-content">
             <h2>My super website</h2>
 
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </section>
+        <!-- /example-frame -->
+      </section>
+      <!-- /example -->
+
+      <section class="example">
+        <h3 class="example-title">Open on hover</h2>
+        <aside class="example-description col-6">
+          <p>
+            This example shows the <strong>onHover</strong> option; in this case we also used a custom hoverDelay (the time interval before a menu opens on hover)
+          </p>
+
+<pre class="spaced"><code class="javascript">$('#my-menu').tendina({
+  onHover: true,
+  hoverDelay: 500
+});</code></pre>
+        </aside>
+        <section class="example-frame col-6">
+          <div class="example-menu-container">
+            <ul id="my-menu-1" class="menu-example">
+              <li><a>Rock</a>
+                <ul>
+                  <li><a>Garage Rock</a>
+                    <ul>
+                      <li><a href="#">The Hives</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Progressive Rock</a>
+                    <ul>
+                      <li><a href="#">King Crimson</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a>Metal</a>
+                <ul>
+                  <li><a>Progressive Metal</a>
+                    <ul>
+                      <li><a href="#">Opeth</a></li>
+                      <li><a href="#">Porcupine Tree</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Groove Metal</a>
+                    <ul>
+                      <li><a href="#">Pantera</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a>Electronica</a>
+                <ul>
+                  <li><a>Acid</a>
+                    <ul>
+                      <li><a href="#">Acidwolf</a></li>
+                    </ul>
+                  </li>
+                  <li><a>IDM</a>
+                    <ul>
+                      <li><a href="#">Aphex Twin</a></li>
+                      <li><a href="#">Autechre</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a>Pop</a>
+                <ul>
+                  <li><a>80s</a>
+                    <ul>
+                      <li><a href="#">Micheal Jackson</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Dance</a>
+                    <ul>
+                      <li><a href="#">Madonna</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="fake-content">
+            <h2>My super website</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </section>
+        <!-- /example-frame -->
+      </section>
+      <!-- /example -->
+
+      <section class="example">
+        <h3 class="example-title">Active menu example</h2>
+        <aside class="example-description col-6">
+          <p>
+            In this case we're using the <strong>activeMenu</strong> option to set an open default menu. In a real world use case, we could pass the current page selector to the option in order to get the menu to show the page we're visiting.
+          </p>
+          <p>You can use plain CSS selectors and jQuery objects as well.</p>
+<pre class="spaced"><code class="html">&lt;ul>
+  &lt;li>
+    &lt;a class="porcupine-tree" href="/pt">Porcupine Tree&lt;/a>
+  &lt;/li>
+&lt;/ul></code></pre>
+<pre><code class="javascript">$('#my-menu').tendina({
+  activeMenu: $('.porcupine-tree')
+  // or
+  activeMenu: '.porcupine-tree'
+});</code></pre>
+        </aside>
+        <section class="example-frame col-6">
+          <div class="example-menu-container">
+            <ul id="my-menu-2" class="menu-example">
+              <li><a href="#">Rock</a>
+                <ul>
+                  <li><a href="#">Garage Rock</a>
+                    <ul>
+                      <li><a href="#">The Hives</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Progressive Rock</a>
+                    <ul>
+                      <li><a href="#">King Crimson</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">Metal</a>
+                <ul>
+                  <li><a href="#">Progressive Metal</a>
+                    <ul>
+                      <li><a href="#">Opeth</a></li>
+                      <li><a class="porcupine-tree" href="#">Porcupine Tree</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Groove Metal</a>
+                    <ul>
+                      <li><a href="#">Pantera</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">Electronica</a>
+                <ul>
+                  <li><a href="#">Acid</a>
+                    <ul>
+                      <li><a href="#">Acidwolf</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">IDM</a>
+                    <ul>
+                      <li><a href="#">Aphex Twin</a></li>
+                      <li><a href="#">Autechre</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">Pop</a>
+                <ul>
+                  <li><a href="#">80s</a>
+                    <ul>
+                      <li><a href="#">Micheal Jackson</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Dance</a>
+                    <ul>
+                      <li><a href="#">Madonna</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="fake-content">
+            <h2>Porcupine Tree</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
           </div>
         </section>
         <!-- /example-frame -->
       </section>
       <!-- /example -->
     </div>
-
-    <div class="wrapper">
-      <section class="example">
-        <h3 class="example-title">Open on hover</h2>
-        <aside class="example-description col-6">
-          <p>
-            This example shows the onHover option
-          </p>
-
-<pre><code class="javascript">$('#my-menu').tendina({
-  onHover: true
-})</code></pre>
-        </aside>
-      </section>
-      <!-- /example -->
-    </div>
+    <!-- /wrapper -->
   </section>
   <!-- /examples -->
 
