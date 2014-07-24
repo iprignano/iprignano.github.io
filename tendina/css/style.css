@@ -85,8 +85,8 @@ a {
   text-align: center;
   padding: 50px 0;
   background-color: #2399da;
-  background-image: -webkit-linear-gradient(bottom, #2399da, #4daee3);
-  background-image: linear-gradient(to top,#2399da, #4daee3);
+  background-image: -webkit-radial-gradient(50% 0%, circle, #79c2ea, #2399da);
+  background-image: radial-gradient(  circle at 50% 0%, #79c2ea, #2399da);
   color: white; }
   #intro .claim {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); }
@@ -122,6 +122,8 @@ a {
 .example-description pre.spaced {
   padding-top: 40px; }
 .example-description code {
+  font-family: "Source Code Pro", monospace;
+  font-size: 15px;
   width: 70%;
   padding: 20px;
   color: white;
@@ -129,14 +131,14 @@ a {
   text-shadow: 0 2px 0 black;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto; }
-  .example-description code.html {
+  .example-description code.full-width {
     width: 100%; }
 
 .example-frame {
   border-radius: 5px;
   background-color: #fafafa;
   position: relative;
-  height: 300px;
+  height: 380px;
   overflow: hidden; }
   .example-frame:before {
     border-radius: 5px;

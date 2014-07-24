@@ -15,7 +15,7 @@ TendinaExamples = (function() {
       hoverDelay: 500
     });
     return $('#my-menu-2').tendina({
-      activeMenu: $('.porcupine-tree')
+      activeMenu: $('.opeth')
     });
   };
 

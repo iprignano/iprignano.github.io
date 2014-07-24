@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <link rel="stylesheet" href="css/monokai_sublime.css">
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <header class="header">
@@ -121,8 +121,11 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur.
+
+            <p>Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
@@ -135,7 +138,7 @@
         <h3 class="example-title">Open on hover</h2>
         <aside class="example-description col-6">
           <p>
-            This example shows the <strong>onHover</strong> option; in this case we also used a custom hoverDelay (the time interval before a menu opens on hover)
+            This example shows the <strong>onHover</strong> option; in this case we also used a custom <strong>hoverDelay</strong> duration (the time interval before a menu opens on hover).
           </p>
 
 <pre class="spaced"><code class="javascript">$('#my-menu').tendina({
@@ -213,8 +216,11 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur.
+
+            <p>Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
@@ -227,18 +233,18 @@
         <h3 class="example-title">Active menu example</h2>
         <aside class="example-description col-6">
           <p>
-            In this case we're using the <strong>activeMenu</strong> option to set an open default menu. In a real world use case, we could pass the current page selector to the option in order to get the menu to show the page we're visiting.
+            In this case we're using the <strong>activeMenu</strong> option to set an open menu when Tendna will be inited. In a real world use case, we could pass the current page selector to the option in order to get the menu to show the page we're visiting.
           </p>
           <p>You can use plain CSS selectors and jQuery objects as well.</p>
-<pre class="spaced"><code class="html">&lt;ul>
+<pre class="spaced"><code class="html full-width">&lt;ul>
   &lt;li>
-    &lt;a class="porcupine-tree" href="/pt">Porcupine Tree&lt;/a>
+    &lt;a class="opeth" href="/opeth">Opeth&lt;/a>
   &lt;/li>
 &lt;/ul></code></pre>
 <pre><code class="javascript">$('#my-menu').tendina({
-  activeMenu: $('.porcupine-tree')
+  activeMenu: $('.opeth')
   // or
-  activeMenu: '.porcupine-tree'
+  activeMenu: '.opeth'
 });</code></pre>
         </aside>
         <section class="example-frame col-6">
@@ -262,8 +268,8 @@
                 <ul>
                   <li><a href="#">Progressive Metal</a>
                     <ul>
-                      <li><a href="#">Opeth</a></li>
-                      <li><a class="porcupine-tree" href="#">Porcupine Tree</a></li>
+                      <li><a class="opeth" href="#">Opeth</a></li>
+                      <li><a href="#">Porcupine Tree</a></li>
                     </ul>
                   </li>
                   <li><a href="#">Groove Metal</a>
@@ -306,13 +312,16 @@
           </div>
 
           <div class="fake-content">
-            <h2>Porcupine Tree</h2>
+            <h2>Opeth</h2>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur.
+
+            <p>Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>

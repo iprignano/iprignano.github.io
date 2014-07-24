@@ -20,6 +20,7 @@ $lightblue: #2399da
 $grey: #313132
 $orange: #E0CE2B
 $headings-font: 'Roboto', sans-serif
+$monospaced-font: 'Source Code Pro', monospace
 
 // Utility stuff
 // ===========================
@@ -86,7 +87,7 @@ a
 #intro
   text-align: center
   padding: 50px 0
-  @include linear-gradient(to top, $lightblue, lighten($lightblue, 10%), $fallback: $lightblue)
+  @include radial-gradient(circle at 50% 0%, lighten($lightblue, 20%), $lightblue, $fallback: $lightblue)
   color: white
 
   .claim
@@ -128,6 +129,8 @@ a
     padding-top: 40px
 
   code
+    font-family: $monospaced-font
+    font-size: 15px
     width: 70%
     padding: 20px
     color: white
@@ -136,14 +139,14 @@ a
     -webkit-font-smoothing: auto
     -moz-osx-font-smoothing: auto
 
-    &.html
+    &.full-width
       width: 100%
 
 .example-frame
   border-radius: 5px
   background-color: #fafafa
   position: relative
-  height: 300px
+  height: 380px
   overflow: hidden
 
   &:before

@@ -11,7 +11,7 @@ class TendinaExamples
       hoverDelay: 500
     )
     $('#my-menu-2').tendina(
-      activeMenu: $('.porcupine-tree')
+      activeMenu: $('.opeth')
     )
 
   initHljs: ->
