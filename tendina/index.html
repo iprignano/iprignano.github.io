@@ -1,3 +1,13 @@
+<!--
+ ___________  _____  _____  _____ 
+/_  __/ __/ |/ / _ \/  _/ |/ / _ |
+ / / / _//    / // // //    / __ |
+/_/ /___/_/|_/____/___/_/|_/_/ |_|
+
+It means 'little curtain' in Italian.
+
+ -->
+
 <!doctype html>
 <html>
 <head>
@@ -18,7 +28,7 @@
 
       <nav class="nav">
         <ul>
-          <li><a class="selected" href="#intro">Intro</a></li>
+          <li><a class="selected" href="#about">About</a></li>
           <li><a href="#examples">Examples</a></li>
           <li><a href="#download">Download</a></li>
         </ul>
@@ -29,14 +39,81 @@
   <!-- /header -->
 
   <section id="intro">
-    <h2 class="claim">Tendina is a simple jQuery plugin that helps you to build vertical,<br /> interactive side-menus in seconds.</h2>
+    <h2 class="claim">Tendina is a simple jQuery plugin that helps you to build dynamic,<br /> interactive side-menus in seconds.</h2>
     <section class="link">
       <div class="download-button"><a href="#">Download</a></div>
-      <div class="github-stars"><iframe src="http://ghbtns.com/github-btn.html?user=iprignano&repo=tendina&type=watch&count=true&size=large"
-  allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe></div>
+      <div class="github-stars"><iframe src="http://ghbtns.com/github-btn.html?user=iprignano&repo=tendina&type=watch&count=false"
+  allowtransparency="true" frameborder="0" scrolling="0" width="50" height="20"></iframe></div>
     </section>
   </section>
   <!-- /intro -->
+
+  <section id="about">
+    <div class="wrapper">
+      <div class="row">
+        <h1>Usage</h1>
+        <p>The basic Tendina use case setup consists in 3 simple steps:</p>
+        <h3>1. Include jQuery and Tendina in your page (heh)</h3>
+<div class="example-description">
+<pre><code class="html">&lt;!-- Shake your &lt;/body> -->
+&lt;script src="path/to/jquery-1.11.1.min.js">&lt;/script>
+&lt;script src="path/to/tendina.min.js">&lt;/script>
+</code></pre>
+</div>
+        <h3>2. Set up your menu markup</h3>
+        <p>The markup must be formatted as an unordered list with links, like this:</p>
+<div class="example-description">
+<pre><code class="html">&lt;ul id="my-menu">
+  &lt;li>&lt;a href="#">Rock&lt;/a>
+    &lt;ul>
+      &lt;li>&lt;a href="#">Garage Rock&lt;/a>
+        &lt;ul>
+          &lt;li>&lt;a href="#">The Hives&lt;/a>&lt;/li>
+        &lt;/ul>
+      &lt;/li>
+      &lt;li>&lt;a href="#">Progressive Rock&lt;/a>
+        &lt;ul>
+          &lt;li>&lt;a href="#">King Crimson&lt;/a>&lt;/li>
+        &lt;/ul>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/li>
+&lt;/ul>
+</code></pre>
+</div>
+<!-- /example-description -->
+      <p class="info"><strong>Don't forget anchor tags!</strong><br />Tendina uses them for DOM traversing, so don't forget to add them (even if they don't have any href).</p>
+      <h3>3. Summon Tendina</h3>
+<div class="example-description">
+<pre><code class="javascript">// Wuzzah!
+$('#my-menu').tendina()
+</code></pre>
+
+<p>You're done! Let's chill out for a sec now, it's been hard.</p>
+</div>
+      </div>
+      <!-- /row -->
+
+      <div class="row">
+        <div class="col-6">
+          <h3>Cool things</h3>
+          <ul>
+            <li>It's lightweight (~4kb minified)</li>
+            <li>It's <em>very</em> easy to use, still has some neat customization options and features</li>
+            <li>Supports 3-level-deep nesting</li>
+            <li>It can be used to convert a horizontal multi-level menu in a mobile dropdown menu in few lines of code</li>
+            <li>Handles dinamically added elements (you can build menus from dynamic JSON trees, yay!)</li>
+          </ul>
+        </div>
+        <div class="col-6">
+          <h3>Browser support</h3>
+          <p>Tendina should work with most browsers, including IE8+ (it also depends from <a href="https://jquery.com/browser-support/">which jQuery you're using</a>).</p>
+        </div>
+      </div>
+      <!-- /row -->
+    </div>
+  </section>
+  <!-- /about -->
 
   <section id="examples">
     <div class="wrapper">
@@ -233,9 +310,9 @@
         <h3 class="example-title">Active menu example</h2>
         <aside class="example-description col-6">
           <p>
-            In this case we're using the <strong>activeMenu</strong> option to set an open menu when Tendna will be inited. In a real world use case, we could pass the current page selector to the option in order to get the menu to show the page we're visiting.
+            In this case we're using the <strong>activeMenu</strong> option to set an open menu when Tendina will be inited. In a real world use case, we could pass the current page selector to the option in order to get the menu to show the page we're visiting.
           </p>
-          <p>You can use plain CSS selectors and jQuery objects as well.</p>
+          <p>You can use plain CSS selectors as well as jQuery objects.</p>
 <pre class="spaced"><code class="html full-width">&lt;ul>
   &lt;li>
     &lt;a class="opeth" href="/opeth">Opeth&lt;/a>
@@ -346,7 +423,7 @@
     </div>
   </section>
 
-  <!-- scriptz -->
+  <!-- mah scripts mah problems -->
   <script src="js/lib/jquery-1.11.1.min.js"></script>
   <script src="js/lib/highlight.pack.js"></script>
   <script src="js/lib/tendina.min.js"></script>
