@@ -22,7 +22,7 @@ It means 'little curtain' in Italian.
   <header class="header">
     <div class="wrapper">
       <figure class="logo">
-        <img src="images/tendina-logo.svg" alt="Tendina" width="200px">
+        <img src="images/tendina-logo.png" alt="Tendina" width="200px">
       </figure>
       <!-- /logo -->
 
@@ -39,11 +39,11 @@ It means 'little curtain' in Italian.
   <!-- /header -->
 
   <section id="intro">
-    <h2 class="claim">Tendina is a simple jQuery plugin that helps you to build dynamic,<br /> interactive side-menus in seconds.</h2>
+    <h1 class="claim">Tendina is a simple jQuery plugin that helps you to build dynamic,<br /> interactive side-menus in seconds.</h1>
     <section class="link">
-      <div class="download-button"><a href="#">Download</a></div>
-      <div class="github-stars"><iframe src="http://ghbtns.com/github-btn.html?user=iprignano&repo=tendina&type=watch&count=false"
-  allowtransparency="true" frameborder="0" scrolling="0" width="50" height="20"></iframe></div>
+      <div class="download-button"><a href="#download">Download</a></div>
+      <div class="github-stars"><iframe src="http://ghbtns.com/github-btn.html?user=iprignano&repo=tendina&type=fork"
+  allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe></div>
     </section>
   </section>
   <!-- /intro -->
@@ -89,36 +89,42 @@ It means 'little curtain' in Italian.
 $('#my-menu').tendina()
 </code></pre>
 
-<p>You're done! Let's chill out for a sec now, it's been hard.</p>
+<p>We're done! Let's chill out for a sec now, it's been hard.</p>
 </div>
       </div>
       <!-- /row -->
-
-      <div class="row about-bottom">
+    </div>
+    <!-- /wrapper -->
+    <div class="row about-bottom">
+      <div class="wrapper">
         <div class="col-6">
-          <h3>Cool things</h3>
+          <h3>Cool things about Tendina</h3>
           <ul>
             <li>It's lightweight (~4kb minified)</li>
             <li>It's <em>very</em> easy to use, still has some neat customization options and features</li>
             <li>Supports 3-level-deep nesting</li>
-            <li>It can be used to convert a horizontal multi-level menu in a mobile dropdown menu in few lines of code</li>
+            <li>Mobile friendly</li>
             <li>Handles dinamically added elements (you can build menus from dynamic JSON trees, yay!)</li>
           </ul>
         </div>
         <div class="col-6">
           <h3>Browser support</h3>
           <p>Tendina should work with most browsers, including IE8+ (it also depends from <a href="https://jquery.com/browser-support/">which jQuery you're using</a>).</p>
+
+          <h3>Styling</h3>
+          <p>Tendina's purpose is to handle menu interactions in a simple, flexible way. As a result, Tendina comes with <strong>no styles at all</strong> – this means you don't need to override useless CSS classes, and you have total control on the styling of your menu.</p>
         </div>
       </div>
-      <!-- /row -->
     </div>
+    <!-- /row -->
   </section>
   <!-- /about -->
 
   <section id="examples">
     <div class="wrapper">
       <h1>Examples</h1>
-      <p>See how you can roll with Tendina.</p>
+      <p>Tendina comes with some options and methods that should make your life easier – here are some examples you could find interesting.</p>
+      <p>To see the full option and method list, <a href="https://github.com/iprignano/tendina#options">head over to GitHub</a>.</p>
       <section class="example">
         <h3 class="example-title">Default example</h2>
         <aside class="example-description col-6">
@@ -312,7 +318,10 @@ $('#my-menu').tendina()
         <h3 class="example-title">Active menu example</h2>
         <aside class="example-description col-6">
           <p>
-            In this case we're using the <strong>activeMenu</strong> option to set an open menu when Tendina will be inited. In a real world use case, we could pass the current page selector to the option in order to get the menu to show the page we're visiting.
+            In this one we're using the <strong>activeMenu</strong> option to set an open menu when Tendina will be inited.
+          </p>
+          <p>
+            In a real-world use case, we could pass the current page selector to the option in order to get the menu to show the page we're visiting. Tendina also adds a <strong>selected</strong> class to the open menu, so we could style it to reflect that.
           </p>
           <p>You can use plain CSS selectors as well as jQuery objects.</p>
 <pre class="spaced"><code class="html full-width">&lt;ul>
@@ -415,20 +424,38 @@ $('#my-menu').tendina()
 
   <section id="download">
     <div class="wrapper">
-      <a href="#">Download it</a>
+      <h1>Download & Install</h1>
+      <h3>Via Bower</h3>
+      <p>If you use Bower, you can install it from the command line:</p>
+<div class="example-description">
+<pre><code>$ bower install tendina
+</code></pre>
+</div>
+      <h3>Via manual install</h3>
+      <p>You can download Tendina packed as a .zip archive from <a href="https://github.com/iprignano/tendina/archive/master.zip">here</a>, or you can visit the <a href="https://github.com/iprignano/tendina">GitHub project page</a> and fork it.</p>
     </div>
   </section>
 
   <section class="footer">
     <div class="wrapper">
-      made by <a href="http://twitter.com/iprignano">@iprignano</a>
+      say hello <a href="http://twitter.com/iprignano">@iprignano</a>
     </div>
   </section>
+  <!-- /footer -->
 
   <!-- mah scripts mah problems -->
   <script src="js/lib/jquery-1.11.1.min.js"></script>
   <script src="js/lib/highlight.pack.js"></script>
   <script src="js/lib/tendina.min.js"></script>
   <script src="js/coffee/main.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53193087-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </body>
 </html>

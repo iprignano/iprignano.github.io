@@ -44,22 +44,26 @@ body {
   -moz-osx-font-smoothing: antialiased; }
 
 a {
-  border-bottom: 1px solid #E0CE2B;
+  border-bottom: 1px solid #2399da;
   text-decoration: none;
-  color: #E0CE2B;
+  color: #2399da;
   cursor: pointer; }
   a:hover {
-    color: #E0CE2B;
+    color: #2399da;
     border-bottom: none; }
   a.selected {
-    color: #E0CE2B;
-    border-bottom: 1px solid #E0CE2B; }
+    color: #2399da;
+    border-bottom: 1px solid #2399da; }
+
+p {
+  color: #515151; }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  color: #4a4a4c; }
 
 h1 {
-  font-size: 35px; }
+  font-size: 36px; }
 
 .header {
   height: 80px; }
@@ -69,7 +73,8 @@ h1 {
     clear: both; }
 
 .logo {
-  float: left; }
+  float: left;
+  padding-top: 8px; }
 
 .nav {
   float: right;
@@ -87,21 +92,20 @@ h1 {
         border-bottom: none;
         text-decoration: none;
         color: #7d7d7f; }
-        .nav ul li a:hover {
-          color: #E0CE2B; }
         .nav ul li a.selected {
-          color: #E0CE2B;
-          border-bottom: 1px solid #E0CE2B; }
+          color: #2399da;
+          border-bottom: 1px solid #2399da; }
 
 #intro {
   text-align: center;
-  padding: 50px 0;
+  padding: 80px 0;
+  color: white;
   background-color: #2399da;
   background-image: -webkit-radial-gradient(50% 0%, circle, #79c2ea, #2399da);
-  background-image: radial-gradient(  circle at 50% 0%, #79c2ea, #2399da);
-  color: white; }
+  background-image: radial-gradient(  circle at 50% 0%, #79c2ea, #2399da); }
   #intro .claim {
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); }
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    color: #fff; }
   #intro .link .download-button,
   #intro .link .github-stars {
     display: block; }
@@ -123,18 +127,20 @@ h1 {
   background-color: #d1eaf8;
   padding: 20px;
   border-left: 10px solid #2399da; }
-#about .about-bottom {
-  background-color: #F5F5F5;
-  margin-top: 30px; }
-  #about .about-bottom h3 {
-    padding-top: 0; }
-  #about .about-bottom .col-6 {
+
+.about-bottom {
+  background-color: #F7F7F7;
+  margin-top: 30px;
+  border-radius: 5px;
+  padding: 25px 0 40px 0;
+  color: #525252; }
+  .about-bottom .col-6 {
     padding: 0 20px 20px 20px; }
-#about h3 {
-  padding-top: 30px; }
-#about ol li,
-#about ul li {
-  padding: 3px 0; }
+  .about-bottom h3 {
+    padding-top: 30px; }
+  .about-bottom ol li,
+  .about-bottom ul li {
+    padding: 5px 0; }
 
 #examples {
   margin-top: 100px; }
@@ -198,9 +204,9 @@ h1 {
       .example-frame .example-menu-container ul > li {
         padding: 10px 10px 5px;
         border-bottom: 1px solid #f1f1f1;
-        -webkit-animation: background-color 0.5s ease-in;
-        -moz-animation: background-color 0.5s ease-in;
-        animation: background-color 0.5s ease-in; }
+        -webkit-transition: all 0.5s ease-in;
+        -moz-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in; }
         .example-frame .example-menu-container ul > li.selected {
           background-color: #fafafa; }
         .example-frame .example-menu-container ul > li a {
@@ -222,6 +228,9 @@ h1 {
               padding: 5px 10px 0; }
               .example-frame .example-menu-container ul > li > ul > li > ul > li a {
                 color: #7d7d7f; }
+              .example-frame .example-menu-container ul > li > ul > li > ul > li.selected a {
+                font-weight: bold;
+                color: #313132; }
   .example-frame .fake-content {
     position: absolute;
     top: 20px;
@@ -230,7 +239,11 @@ h1 {
     padding-left: 20px;
     opacity: 0.4; }
 
+#download {
+  padding: 40px 0; }
+
 .footer {
+  padding: 40px 0;
   text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
