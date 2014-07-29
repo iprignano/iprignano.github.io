@@ -111,6 +111,8 @@ h1 {
 .logo {
   float: left;
   padding-top: 8px; }
+  .logo img {
+    width: 199px; }
 
 .nav {
   float: right;
