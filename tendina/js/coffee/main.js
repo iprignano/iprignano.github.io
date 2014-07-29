@@ -55,6 +55,10 @@ TendinaExamples = (function() {
     return _results;
   };
 
+  TendinaExamples.prototype._isMobile = function() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  };
+
   TendinaExamples.prototype._bindEvents = function() {
     $('.menu-example ul li > ul li a').on('click', (function(_this) {
       return function(event) {
@@ -64,7 +68,9 @@ TendinaExamples = (function() {
     })(this));
     $(window).on('scroll', (function(_this) {
       return function() {
-        _this.scrollSpy();
+        if (!_this._isMobile()) {
+          _this.scrollSpy();
+        }
         if ($(window).scrollTop() > $('#usage').position().top) {
           return _this.showSmallTopbar();
         } else {

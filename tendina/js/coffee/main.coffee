@@ -40,6 +40,8 @@ class TendinaExamples
         @$smallHeaderLink.filter("[data-name='#{section}']").addClass 'selected'
 
   # Private methods
+  _isMobile: ->
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 
   _bindEvents: ->
     $('.menu-example ul li > ul li a').on 'click', (event) =>
@@ -47,7 +49,7 @@ class TendinaExamples
       @swapFakeContentText(event.currentTarget)
 
     $(window).on 'scroll', =>
-      @scrollSpy()
+      @scrollSpy() unless @_isMobile()
 
       if $(window).scrollTop() > $('#usage').position().top
         @showSmallTopbar()
