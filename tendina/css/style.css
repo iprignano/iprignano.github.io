@@ -305,7 +305,8 @@ h1 {
   .small-header ul {
     float: none;
     width: 100%;
-    text-align: center; }
+    text-align: center;
+    margin: 0; }
 
   .example-description code {
     width: 100%; } }
