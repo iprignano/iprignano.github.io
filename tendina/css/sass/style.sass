@@ -76,10 +76,11 @@ h1
   width: 100%
   height: $small-header-height
   padding: 20px 0
-  top: 0 //-$small-header-height
+  top: -$small-header-height
   left: 0
-  background-color: rgba(255,255,255,.5)
+  background-color: rgba(255,255,255,.8)
   z-index: 4
+  @include transition(all .5s ease)
 
   &.active
     top: 0
@@ -95,6 +96,7 @@ h1
         border-bottom: none
         text-decoration: none
         color: lighten($grey, 30%)
+        text-shadow: 0 1px 1px rgba(255,255,255,1)
 
         &.selected
           color: $lightblue
@@ -181,7 +183,6 @@ h1
   .about-bottom
     background-color: #F7F7F7
     margin-top: 30px
-    border-radius: 5px
     padding: 25px 0 40px 0
     color: #525252
 

@@ -3,6 +3,7 @@ var TendinaExamples;
 
 TendinaExamples = (function() {
   function TendinaExamples() {
+    this.$smallHeaderLink = $('.small-header a');
     this.initTendinaExamples();
     this.initHljs();
     this._bindEvents();
@@ -30,11 +31,51 @@ TendinaExamples = (function() {
     return $fakeContent.find('h2').text(clickedText);
   };
 
+  TendinaExamples.prototype.hideSmallTopbar = function() {
+    return $('.small-header').removeClass('active');
+  };
+
+  TendinaExamples.prototype.showSmallTopbar = function() {
+    return $('.small-header').addClass('active');
+  };
+
+  TendinaExamples.prototype.scrollSpy = function() {
+    var section, sections, _i, _len, _results;
+    sections = ['usage', 'examples', 'download'];
+    _results = [];
+    for (_i = 0, _len = sections.length; _i < _len; _i++) {
+      section = sections[_i];
+      if ($(window).scrollTop() > $("#" + section).position().top) {
+        this.$smallHeaderLink.removeClass('selected');
+        _results.push(this.$smallHeaderLink.filter("[data-name='" + section + "']").addClass('selected'));
+      } else {
+        _results.push(void 0);
+      }
+    }
+    return _results;
+  };
+
   TendinaExamples.prototype._bindEvents = function() {
-    return $('.menu-example ul li > ul li a').on('click', (function(_this) {
+    $('.menu-example ul li > ul li a').on('click', (function(_this) {
       return function(event) {
         event.preventDefault();
         return _this.swapFakeContentText(event.currentTarget);
+      };
+    })(this));
+    $(window).on('scroll', (function(_this) {
+      return function() {
+        _this.scrollSpy();
+        if ($(window).scrollTop() > $('#usage').position().top) {
+          return _this.showSmallTopbar();
+        } else {
+          return _this.hideSmallTopbar();
+        }
+      };
+    })(this));
+    return this.$smallHeaderLink.on('click', (function(_this) {
+      return function(event) {
+        _this.$smallHeaderLink.removeClass('selected');
+        return $(event.currentTarget).addClass('selected');
       };
     })(this));
   };

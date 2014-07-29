@@ -1,5 +1,7 @@
 class TendinaExamples
   constructor: ->
+    @$smallHeaderLink = $('.small-header a')
+
     @initTendinaExamples()
     @initHljs()
     @_bindEvents()
@@ -23,12 +25,38 @@ class TendinaExamples
 
     $fakeContent.find('h2').text(clickedText)
 
+  hideSmallTopbar: ->
+    $('.small-header').removeClass 'active'
+
+  showSmallTopbar: ->
+    $('.small-header').addClass 'active'
+
+  scrollSpy: ->
+    sections = ['usage', 'examples', 'download']
+
+    for section in sections
+      if $(window).scrollTop() > $("##{section}").position().top
+        @$smallHeaderLink.removeClass 'selected'
+        @$smallHeaderLink.filter("[data-name='#{section}']").addClass 'selected'
+
   # Private methods
 
   _bindEvents: ->
     $('.menu-example ul li > ul li a').on 'click', (event) =>
       event.preventDefault()
       @swapFakeContentText(event.currentTarget)
+
+    $(window).on 'scroll', =>
+      @scrollSpy()
+
+      if $(window).scrollTop() > $('#usage').position().top
+        @showSmallTopbar()
+      else
+        @hideSmallTopbar()
+
+    @$smallHeaderLink.on 'click', (event) =>
+      @$smallHeaderLink.removeClass 'selected'
+      $(event.currentTarget).addClass 'selected'
 
 $ ->
   window.tendinaExamples = new TendinaExamples

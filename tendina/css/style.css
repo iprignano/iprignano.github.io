@@ -83,10 +83,13 @@ h1 {
   width: 100%;
   height: 60px;
   padding: 20px 0;
-  top: 0;
+  top: -60px;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  z-index: 4; }
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 4;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
   .small-header.active {
     top: 0; }
   .small-header ul {
@@ -97,7 +100,8 @@ h1 {
       .small-header ul li a {
         border-bottom: none;
         text-decoration: none;
-        color: #7d7d7f; }
+        color: #7d7d7f;
+        text-shadow: 0 1px 1px white; }
         .small-header ul li a.selected {
           color: #2399da;
           border-bottom: 1px solid #2399da; }
@@ -177,7 +181,6 @@ h1 {
 #usage .about-bottom {
   background-color: #F7F7F7;
   margin-top: 30px;
-  border-radius: 5px;
   padding: 25px 0 40px 0;
   color: #525252; }
 #usage .col-6 {
